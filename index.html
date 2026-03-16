@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Title shown in browser tab -->
+<title>User Login</title>
+
+<!-- Enables responsive layout on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS for styling -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap icons for password toggle -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Custom CSS file -->
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<!-- Main container used to center the login card -->
+<div class="container page-center">
+
+<div class="row justify-content-center w-100">
+
+<!-- Responsive column -->
+<div class="col-12 col-sm-10 col-md-6 col-lg-4">
+
+<!-- Bootstrap card -->
+<div class="card p-4">
+
+<h3 class="text-center mb-3">Login</h3>
+
+<form>
+
+<!-- Email input -->
+<div class="mb-3">
+<label class="form-label">Email</label>
+<input type="email" class="form-control">
+</div>
+
+<!-- Password input with toggle -->
+<div class="mb-3">
+
+<label class="form-label">Password</label>
+
+<div class="input-group">
+
+<input type="password" class="form-control" id="password">
+
+<!-- Eye icon button -->
+<button class="btn btn-outline-dark" type="button" id="togglePassword">
+<i class="bi bi-eye"></i>
+</button>
+
+</div>
+
+</div>
+
+<!-- Login button -->
+<button class="btn btn-primary w-100">Login</button>
+
+<!-- Navigation links -->
+<div class="text-center mt-3">
+<a href="register.html">Register</a> |
+<a href="forgot-password.html">Forgot Password</a>
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- JavaScript for password toggle -->
+<script>
+
+const togglePassword=document.getElementById("togglePassword");
+const password=document.getElementById("password");
+
+togglePassword.onclick=function(){
+
+password.type=password.type==="password"?"text":"password";
+
+}
+
+</script>
+
+</body>
+</html>
