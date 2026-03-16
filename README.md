@@ -62,7 +62,7 @@ html-authentication-poc/
 ├── forgot-password.html    # Forgot password page
 ├── reset-password.html     # Reset password page
 ├── dashboard.html          # Dashboard page
-├── style.css               # Custom CSS styling
+├── styles.css               # Custom CSS styling
 ├── README.md               # Project documentation
 │
 ├── login.png
