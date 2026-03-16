@@ -51,25 +51,27 @@ Displays a simple dashboard layout with navigation and information cards.
 - **Google Fonts**
 
 ---
-
 ## Project Structure
+
+```
 html-authentication-poc/
 
 │
-├── index.html # Login page
-├── register.html # Registration page
-├── forgot-password.html # Forgot password page
-├── reset-password.html # Reset password page
-├── dashboard.html # Dashboard page
-├── styles.css # Custom CSS styling
-├── README.md # Project documentation
+├── index.html              # Login page
+├── register.html           # Registration page
+├── forgot-password.html    # Forgot password page
+├── reset-password.html     # Reset password page
+├── dashboard.html          # Dashboard page
+├── style.css               # Custom CSS styling
+├── README.md               # Project documentation
 │
-└── screenshots/ # Screenshots of all pages
 ├── login.png
 ├── register.png
 ├── forgot-password.png
 ├── reset-password.png
 └── dashboard.png
+```
+
 
 ## Screenshots
 
