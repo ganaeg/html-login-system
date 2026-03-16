@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Page title -->
+<title>User Registration</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!-- Bootstrap icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<!-- Centered container -->
+<div class="container page-center">
+
+<div class="row justify-content-center w-100">
+
+<div class="col-12 col-sm-10 col-md-6 col-lg-4">
+
+<div class="card p-4">
+
+<h3 class="text-center mb-3">Create Account</h3>
+
+<form id="registerForm">
+
+<!-- Name -->
+<div class="mb-3">
+<label class="form-label">Full Name</label>
+<input type="text" class="form-control">
+</div>
+
+<!-- Email -->
+<div class="mb-3">
+<label class="form-label">Email</label>
+<input type="email" class="form-control">
+</div>
+
+<!-- Password -->
+<div class="mb-3">
+
+<label class="form-label">Password</label>
+
+<div class="input-group">
+
+<input type="password" id="password" class="form-control">
+
+<button class="btn btn-outline-dark" type="button" id="togglePassword">
+<i class="bi bi-eye"></i>
+</button>
+
+</div>
+
+<!-- Password strength text -->
+<small id="strengthText"></small>
+
+</div>
+
+<!-- Confirm password -->
+<div class="mb-3">
+<label class="form-label">Confirm Password</label>
+<input type="password" id="confirmPassword" class="form-control">
+</div>
+
+<!-- Error message -->
+<div id="errorMessage" class="text-danger"></div>
+
+<button class="btn btn-success w-100">
+Register
+</button>
+
+<div class="text-center mt-3">
+<a href="index.html">Back to Login</a>
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- JavaScript -->
+<script>
+
+/* Password toggle */
+
+const togglePassword=document.getElementById("togglePassword");
+const password=document.getElementById("password");
+
+togglePassword.onclick=function(){
+
+password.type=password.type==="password"?"text":"password";
+
+}
+
+/* Password strength */
+
+const strength=document.getElementById("strengthText");
+
+password.addEventListener("input",function(){
+
+if(password.value.length<4){
+strength.textContent="Weak password";
+strength.style.color="red";
+}
+else if(password.value.length<8){
+strength.textContent="Medium password";
+strength.style.color="orange";
+}
+else{
+strength.textContent="Strong password";
+strength.style.color="green";
+}
+
+});
+
+/* Validation */
+
+document.getElementById("registerForm").addEventListener("submit",function(e){
+
+const pass=password.value;
+const confirm=document.getElementById("confirmPassword").value;
+
+if(pass!==confirm){
+
+e.preventDefault();
+document.getElementById("errorMessage").innerText="Passwords do not match";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
